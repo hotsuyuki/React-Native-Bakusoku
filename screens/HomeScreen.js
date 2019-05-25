@@ -37,6 +37,7 @@ class HomeScreen extends React.Component {
 
 
   onListItemPress = (selectedReview) => {
+    this.props.selectDetailReview(selectedReview);
     this.props.navigation.navigate('detail');
   }
 
