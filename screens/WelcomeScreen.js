@@ -1,5 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, Dimensions, AsyncStorage } from 'react-native';
+import {
+  StyleSheet, Text, View, ScrollView, Image, ActivityIndicator,
+  Dimensions, AsyncStorage
+} from 'react-native';
 import { Button } from 'react-native-elements';
 
 
@@ -79,6 +82,10 @@ class WelcomeScreen extends React.Component {
 
 
   render() {
+    if (this.state.isInitialized === null) {
+      return <ActivityIndicator size="large" />;
+    }
+
     return (
       <ScrollView
         horizontal
