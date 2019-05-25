@@ -2,6 +2,8 @@
 
 ---
 
+![demo_video.gif](./demo_video.gif)
+
 This repository is referred from
 
 1. [Welcome screen (note.mu)](https://note.mu/cube0529/n/n4a130029dfe1)
