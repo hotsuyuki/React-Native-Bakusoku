@@ -33,8 +33,7 @@ class DetailScreen extends React.Component {
 
 
   async componentDidMount() {
-    //Geocoder.setApiKey('YOUR_GOOGLE_MAP_API_KEY');
-    Geocoder.setApiKey('AIzaSyCzR5z2olEGKhpczyK0g53KNb5Kl-vHlX0');
+    Geocoder.setApiKey('YOUR_GOOGLE_MAP_API_KEY');
 
     let result = await Geocoder.getFromLocation(this.props.detailReview.country);
 
