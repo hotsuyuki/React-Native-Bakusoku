@@ -4,7 +4,7 @@ import {
   Text, View, ScrollView, ActivityIndicator, Image, TouchableOpacity, Modal,
   Dimensions, Platform
 } from 'react-native';
-import { MapView } from 'expo';
+import MapView from 'react-native-maps';
 import { connect } from 'react-redux';
 
 import * as actions from '../actions';
@@ -33,9 +33,9 @@ class DetailScreen extends React.Component {
 
 
   async componentDidMount() {
-    Geocoder.setApiKey('YOUR_GOOGLE_MAP_API_KEY');
+    Geocoder.init('YOUR_GOOGLE_MAP_API_KEY');
 
-    let result = await Geocoder.getFromLocation(this.props.detailReview.country);
+    let result = await Geocoder.from(this.props.detailReview.country);
 
     this.setState({
       isMapLoaded: true,
